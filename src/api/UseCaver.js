@@ -86,30 +86,3 @@ export const getBalance = (address) => {
   });
 };
 
-// const CountContract = new caver.contract(CounterABI, COUNT_CONTRACT_ADDRESS);
-
-// // 읽을 때 : 그 주소에 가서 count 실행 (count는 ABI에서 가져옴)
-// export const readCount = async () => {
-//   const _count = await CountContract.methods.count().call();
-//   console.log(_count);
-// }
-
-// //
-// export const setCount = async (newCount) => {
-//   // 외부 호출 시 문제 발생 가능. trycatch
-//   // 사용할 account 설정
-//   try {
-// 	const privatekey = '0x8daed3cd370c094ef31006d82dd747c5980e2cc69e1f999d2d5fc01e3b3d4130';
-// 	const deployer = caver.wallet.keyring.createFromPrivateKey(privatekey);
-// 	caver.wallet.add(deployer);
-// 	// 스마트 컨트랙트 실행 트랜잭션 날리기
-// 	const receipt = await CountContract.methods.setCount(newCount).send({
-// 	  from: deployer.address, //address
-// 	  gas: "0x4bfd200" // 수수료. 아무 숫자나 넣어도 트랜잭션에 필요한 만큼만 사용하고 되돌아 옴
-// 	});
-// 	// 결과 출력
-// 	console.log(receipt);
-//   } catch (e) {
-// 	console.log(`[ERROR_SET_COUNT]${e}`);
-//   }
-// }
