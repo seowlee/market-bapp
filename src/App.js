@@ -51,7 +51,7 @@ function App() {
   const [nfts, setNfts] = useState([]); // {id: '101', uri: ''}
   const [myBalance, setMyBalance] = useState("0");
   const [myAddress, setMyAddress] = useState(DEFAULT_ADDRESS);
-  // const [myAddress, setMyAddress] = useState("0xC8b5293037Af9d10CF17db831ae87bF077a77984");
+  // const [myAddress, setMyAddress] = useState("0x");
 
   // UI
   // qrcode 보기
@@ -81,7 +81,7 @@ function App() {
   // fetchMyNFTs (내 nft 가져오기)
   const fetchMyNFTs = async () => {
     // const _nfts = await fetchCardOf(
-    //   "0xC8b5293037Af9d10CF17db831ae87bF077a77984" // myAddress
+    //   "0x" // myAddress
     // );
     // 지갑이 연동 되었을 때만 nft 목록이 나옴.
     if (myAddress === DEFAULT_ADDRESS) {
@@ -95,8 +95,8 @@ function App() {
     // balanceOf -> 내가 가진 전체 NFT 토큰 개수를 가져온다
     // 2
     // tokenOfOwnerByIndex -> 내가 가진 NFT token ID를 하나씩 가져온다 -> 배열로
-    // 0xC8b5293037Af9d10CF17db831ae87bF077a77984, 0 -> 100
-    // 0xC8b5293037Af9d10CF17db831ae87bF077a77984, 1 -> 101
+    // 0x, 0 -> 100
+    // 0x, 1 -> 101
     // tokenURI -> 앞에서 가져온 tokenID를 이용해서 tokenURI를 하나씩 가져온다 ->
     // 100 -> xx.png
     // 101 -> tt.jpg
